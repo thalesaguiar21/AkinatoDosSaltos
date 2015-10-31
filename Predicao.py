@@ -35,7 +35,7 @@ class Predicao(object):
 
 	def setListaDeSaltos(self, listaDeSaltos):
 		arquiDeLeitura = open(listaDeSaltos, 'r+')
-		self.listaDeSaltos.append(list(arquiDeLeitura.readline()))
+		self.listaDeSaltos = list(arquiDeLeitura.readline())
 		arquiDeLeitura.closed
 
 	def setPredicoesFeitas(self, novasPredicoes):

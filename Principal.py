@@ -1,8 +1,9 @@
 from Predicao import *
 from PredicaoDeUmBit import *
+from PredicaoDeDoisBits import *
 
 
-testeDeArquivo = PredicaoDeUmBit()
+testeDeArquivo = PredicaoDeDoisBits()
 testeDeArquivo.setListaDeSaltos('teste.txt')
 testeDeArquivo.predizer()
 print(testeDeArquivo.getPorcentagemDeAcertos())
