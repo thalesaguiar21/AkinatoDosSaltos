@@ -1,12 +1,13 @@
 from Predicao import *
 from PredicaoDeUmBit import *
 from PredicaoDeDoisBits import *
+from PredicaoMisteriosa import *
 
 
-testeDeArquivo = PredicaoDeDoisBits()
-testeDeArquivo.setListaDeSaltos('teste.txt')
-testeDeArquivo.predizer()
-print(testeDeArquivo.getPorcentagemDeAcertos())
-print(testeDeArquivo.getPredicoesFeitas())
-print(testeDeArquivo.getListaDeSaltos())
+testePredMisteriosa = PredicaoMisteriosa()
+testePredMisteriosa.setListaDeSaltos('teste.txt')
+testePredMisteriosa.predizer()
+print(testePredMisteriosa.getPorcentagemDeAcertos())
+print(testePredMisteriosa.getPredicoesFeitas())
+print(testePredMisteriosa.getListaDeSaltos())
 

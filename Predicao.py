@@ -4,7 +4,7 @@ class Predicao(object):
 
 	def __init__(self):
 		self.listaDeSaltos = []
-		self.proximaPredicao = 'T'
+		self.proximaPredicao = 'N'
 		self.predicoesCorretas = 0
 		self.predicoesFeitas = []
 
@@ -30,8 +30,9 @@ class Predicao(object):
 			self.proximaPredicao = 'N'
 		elif(self.proximaPredicao == 'N'):
 			self.proximaPredicao = 'T'
-		#else:
-			#raise InvalidArgumentException('A predição não é válida. Por favor, corriga o arquivo de entrada.')
+
+	def setProximaPredicao(self, novaPred):
+		self.proximaPredicao = novaPred
 
 	def setListaDeSaltos(self, listaDeSaltos):
 		arquiDeLeitura = open(listaDeSaltos, 'r+')
