@@ -10,4 +10,3 @@ testePredMisteriosa.predizer()
 print(testePredMisteriosa.getPorcentagemDeAcertos())
 print(testePredMisteriosa.getPredicoesFeitas())
 print(testePredMisteriosa.getListaDeSaltos())
-

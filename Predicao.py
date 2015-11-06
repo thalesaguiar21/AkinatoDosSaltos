@@ -4,7 +4,7 @@ class Predicao(object):
 
 	def __init__(self):
 		self.listaDeSaltos = []
-		self.proximaPredicao = 'N'
+		self.proximaPredicao = 'T'
 		self.predicoesCorretas = 0
 		self.predicoesFeitas = []
 
