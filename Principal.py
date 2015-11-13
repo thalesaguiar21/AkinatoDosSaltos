@@ -2,9 +2,10 @@ from Predicao import *
 from PredicaoDeUmBit import *
 from PredicaoDeDoisBits import *
 from PredicaoMisteriosa import *
+from TwoLevelAdaptive import *
 
 
-testePredMisteriosa = PredicaoDeDoisBits()
+testePredMisteriosa = TwoLevelAdaptive()
 testePredMisteriosa.setListaDeSaltos('teste.txt')
 testePredMisteriosa.predizer()
 print(testePredMisteriosa.getPorcentagemDeAcertos())
