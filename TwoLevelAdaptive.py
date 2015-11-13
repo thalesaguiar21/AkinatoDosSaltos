@@ -8,6 +8,10 @@ class TwoLevelAdaptive(Predicao):
 		Predicao.__init__(self)
 		self.tabelaDeHistoricos = {'TT' : 'T', 'TN' : 'T', 'NT' : 'T', 'NN' : 'T'}
 
+	def reset(self):
+		Predicao.reset(self)
+		self.tabelaDeHistoricos = {'TT' : 'T', 'TN' : 'T', 'NT' : 'T', 'NN' : 'T'}
+
 	def predizer(self, listaDeSaltos):
 		counter = 0
 		start = 0

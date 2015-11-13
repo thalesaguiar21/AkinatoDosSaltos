@@ -1,9 +1,5 @@
 from Predicao import *
-from PredicaoDeUmBit import *
-from PredicaoDeDoisBits import *
-from PredicaoMisteriosa import *
-from TwoLevelAdaptive import *
-from FabricaDePredicoes import *
+from FabricaDePreditores import *
 from Reader import *
 
 class Principal(object):
@@ -12,27 +8,30 @@ class Principal(object):
 		self.listaDePreditores = []
 		self.listaDeSaltos = ''
 		self.reader = Reader()
+		self.fabrica = FabricaDePreditores()
 		self.adicionarPreditores()
 
 
 	def adicionarPreditores(self):
 		counter = 1
 		while(counter <= 4):
-			self.listaDePreditores.append(criarPreditor(counter))
+			self.listaDePreditores.append(self.fabrica.criarPreditor(counter))
 			counter += 1
 
 
 	def adicionarSaltos(self, caminhoDoArquivoEntrada):
-		self.listaDeSaltos = self.reader.read()
+		self.listaDeSaltos = self.reader.read(caminhoDoArquivoEntrada)
 
 
 	def executarPredicoes(self, caminhoDoArquivoEntrada):
-		self.adicionarPreditores(caminhoDoArquivoEntrada)
+		self.adicionarSaltos(caminhoDoArquivoEntrada)
 		for linha in self.listaDeSaltos:
 			print('Saltos da iteração: \t' + linha)
+			print('-------------------------------------------------------------')
 			for preditor in self.listaDePreditores:
 				preditor.predizer(linha)
 				preditor.exibirResultados()
+				preditor.reset()
 			print('-------------------------------------------------------------')
 
 

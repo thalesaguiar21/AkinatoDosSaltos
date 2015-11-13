@@ -10,10 +10,10 @@ class Predicao(object):
 	def setPredicoesCorretas(self, numeroDePredicoes):
 		if (numeroDePredicoes < 0):
 			return 'O número de acertos não pode ser negativo.'
-		elif(numeroDePredicoes > len(listaDeSaltos)):
+		elif(numeroDePredicoes > len(self.predicoesFeitas)):
 			return 'O número de acertos não pode ser maior que a quantidade de saltos.'
 		else:
-			self.predicoesCorretas += 1
+			self.predicoesCorretas = numeroDePredicoes
 
 	def getPredicoesCorretas(self):
 		return self.predicoesCorretas
@@ -41,7 +41,11 @@ class Predicao(object):
 
 	def exibirResultados(self):
 		print('Predições feitas:\t' + self.predicoesFeitas)
-		print('Porcentagem de acertos:\t' + self.getPorcentagemDeAcertos())
+		print('Porcentagem de acertos:\t' + str(self.getPorcentagemDeAcertos()))
+
+	def reset(self):
+		self.setPredicoesFeitas('')
+		self.setPredicoesCorretas(0)
 
 	def predizer(self, listaDeSaltos):
 		pass
