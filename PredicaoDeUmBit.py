@@ -15,7 +15,7 @@ class PredicaoDeUmBit(Predicao):
 
 	def predizer(self):
 		for salto in self.listaDeSaltos:
-			self.predicoesFeitas.append(self.proximaPredicao)
+			self.predicoesFeitas += self.proximaPredicao
 			if(salto == self.proximaPredicao):
 				self.predicoesCorretas += 1
 			else:

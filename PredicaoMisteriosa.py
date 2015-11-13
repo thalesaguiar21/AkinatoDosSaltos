@@ -10,7 +10,7 @@ class PredicaoMisteriosa(Predicao):
 
 	def predizer(self):
 		for salto in self.listaDeSaltos:
-			self.predicoesFeitas.append(self.proximaPredicao)
+			self.predicoesFeitas += self.proximaPredicao
 			# Atualiza a frequência de saltos
 			if(salto == 'T'):
 				self.freqDeSaltosTomados += 1

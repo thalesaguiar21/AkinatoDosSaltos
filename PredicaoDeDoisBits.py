@@ -10,7 +10,7 @@ class PredicaoDeDoisBits(Predicao):
 
 	def predizer(self):
 		for salto in self.listaDeSaltos:
-			self.predicoesFeitas.append(self.proximaPredicao)
+			self.predicoesFeitas += self.proximaPredicao
 
 			if(salto == 'T'):
 				if(self.contadorDeErros == 1):

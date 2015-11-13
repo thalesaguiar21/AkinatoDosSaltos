@@ -6,7 +6,7 @@ class Predicao(object):
 		self.listaDeSaltos = []
 		self.proximaPredicao = 'T'
 		self.predicoesCorretas = 0
-		self.predicoesFeitas = []
+		self.predicoesFeitas = ''
 
 	def setPredicoesCorretas(self, numeroDePredicoes):
 		if (numeroDePredicoes < 0):
@@ -33,7 +33,7 @@ class Predicao(object):
 
 	def setListaDeSaltos(self, listaDeSaltos):
 		arquiDeLeitura = open(listaDeSaltos, 'r+')
-		self.listaDeSaltos = list(arquiDeLeitura.readline())
+		self.listaDeSaltos = arquiDeLeitura.readline()
 		arquiDeLeitura.closed
 
 	def setPredicoesFeitas(self, novasPredicoes):
