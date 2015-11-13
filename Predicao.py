@@ -25,14 +25,14 @@ class Predicao(object):
 	def getProximaPredicao(self):
 		return self.proximaPredicao
 
+	def setProximaPredicao(self, novaPred):
+		self.proximaPredicao = novaPred
+
 	def setProximaPredicao(self):
 		if(self.proximaPredicao == 'T'):
 			self.proximaPredicao = 'N'
 		elif(self.proximaPredicao == 'N'):
 			self.proximaPredicao = 'T'
-
-	def setProximaPredicao(self, novaPred):
-		self.proximaPredicao = novaPred
 
 	def setListaDeSaltos(self, listaDeSaltos):
 		arquiDeLeitura = open(listaDeSaltos, 'r+')

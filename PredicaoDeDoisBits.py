@@ -39,12 +39,3 @@ class PredicaoDeDoisBits(Predicao):
 				self.setProximaPredicao('T')
 			else:
 				self.setProximaPredicao('N')
-			'''
-			if(salto == self.proximaPredicao):
-				self.predicoesCorretas += 1
-				contadorDeErros = (contadorDeErros - 1)
-				contadorDeErros = 1
-			else:
-				contadorDeErros = (contadorDeErros + 1) % 4
-			'''
-					
