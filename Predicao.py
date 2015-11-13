@@ -3,7 +3,6 @@ class Predicao(object):
 	''' Classe pai de todos os akinators de saltos '''
 
 	def __init__(self):
-		self.listaDeSaltos = []
 		self.proximaPredicao = 'T'
 		self.predicoesCorretas = 0
 		self.predicoesFeitas = ''
@@ -40,11 +39,9 @@ class Predicao(object):
 			stringPredicoesFeitas += ' ' + salto
 		return stringPredicoesFeitas
 
-	def getListaDeSaltos(self):
-		stringListaDeSaltos = ''
-		for salto in self.listaDeSaltos:
-			stringListaDeSaltos += ' ' + salto
-		return stringListaDeSaltos
+	def exibirResultados(self):
+		print('Predições feitas:\t' + self.predicoesFeitas)
+		print('Porcentagem de acertos:\t' + self.getPorcentagemDeAcertos())
 
 	def predizer(self, listaDeSaltos):
 		pass
