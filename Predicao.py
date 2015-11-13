@@ -40,10 +40,16 @@ class Predicao(object):
 		self.predicoesFeitas = novasPredicoes
 
 	def getPredicoesFeitas(self):
-		return self.predicoesFeitas
+		stringPredicoesFeitas = ''
+		for salto in self.predicoesFeitas:
+			stringPredicoesFeitas += ' ' + salto
+		return stringPredicoesFeitas
 
 	def getListaDeSaltos(self):
-		return self.listaDeSaltos
+		stringListaDeSaltos = ''
+		for salto in self.listaDeSaltos:
+			stringListaDeSaltos += ' ' + salto
+		return stringListaDeSaltos
 
 	def predizer(self):
 		pass

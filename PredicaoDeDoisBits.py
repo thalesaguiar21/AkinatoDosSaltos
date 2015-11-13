@@ -5,8 +5,8 @@ class PredicaoDeDoisBits(Predicao):
 	''' Esta classe implementa uma predição de saltos de dois bits '''
 
 	def __init__(self):
-		self.contadorDeErros = 0
 		Predicao.__init__(self)
+		self.contadorDeErros = 0
 
 	def predizer(self):
 		for salto in self.listaDeSaltos:
