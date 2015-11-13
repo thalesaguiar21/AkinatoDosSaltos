@@ -18,7 +18,7 @@ class Predicao(object):
 
 	def getPredicoesCorretas(self):
 		return self.predicoesCorretas
-	
+
 	def getPorcentagemDeAcertos(self):
 		return self.predicoesCorretas/len(self.predicoesFeitas)
 
