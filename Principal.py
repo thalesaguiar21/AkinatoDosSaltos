@@ -4,7 +4,7 @@ from PredicaoDeDoisBits import *
 from PredicaoMisteriosa import *
 
 
-testePredMisteriosa = PredicaoDeDoisBits()
+testePredMisteriosa = PredicaoDeUmBit()
 testePredMisteriosa.setListaDeSaltos('teste.txt')
 testePredMisteriosa.predizer()
 print(testePredMisteriosa.getPorcentagemDeAcertos())

@@ -18,7 +18,7 @@ class Predicao(object):
 
 	def getPredicoesCorretas(self):
 		return self.predicoesCorretas
-
+	
 	def getPorcentagemDeAcertos(self):
 		return self.predicoesCorretas/len(self.predicoesFeitas)
 
@@ -26,13 +26,10 @@ class Predicao(object):
 		return self.proximaPredicao
 
 	def setProximaPredicao(self, novaPred):
-		self.proximaPredicao = novaPred
-
-	def setProximaPredicao(self):
-		if(self.proximaPredicao == 'T'):
-			self.proximaPredicao = 'N'
-		elif(self.proximaPredicao == 'N'):
-			self.proximaPredicao = 'T'
+		if(novaPred == 'T' or novaPred == 'N'):
+			self.proximaPredicao = novaPred
+		else:
+			return 'Entrada não é um salto permitido'
 
 	def setListaDeSaltos(self, listaDeSaltos):
 		arquiDeLeitura = open(listaDeSaltos, 'r+')
