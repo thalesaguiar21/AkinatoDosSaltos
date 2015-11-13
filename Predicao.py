@@ -25,14 +25,11 @@ class Predicao(object):
 	def getProximaPredicao(self):
 		return self.proximaPredicao
 
-	def setProximaPredicao(self):
-		if(self.proximaPredicao == 'T'):
-			self.proximaPredicao = 'N'
-		elif(self.proximaPredicao == 'N'):
-			self.proximaPredicao = 'T'
-
 	def setProximaPredicao(self, novaPred):
-		self.proximaPredicao = novaPred
+		if(novaPred == 'T' or novaPred == 'N'):
+			self.proximaPredicao = novaPred
+		else:
+			return 'Entrada não é um salto permitido'
 
 	def setListaDeSaltos(self, listaDeSaltos):
 		arquiDeLeitura = open(listaDeSaltos, 'r+')
