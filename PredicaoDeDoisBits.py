@@ -8,8 +8,8 @@ class PredicaoDeDoisBits(Predicao):
 		Predicao.__init__(self)
 		self.contadorDeErros = 0
 
-	def predizer(self):
-		for salto in self.listaDeSaltos:
+	def predizer(self, listaDeSaltos):
+		for salto in listaDeSaltos:
 			self.predicoesFeitas += self.proximaPredicao
 
 			if(salto == 'T'):

@@ -31,11 +31,6 @@ class Predicao(object):
 		else:
 			return 'Entrada não é um salto permitido'
 
-	def setListaDeSaltos(self, listaDeSaltos):
-		arquiDeLeitura = open(listaDeSaltos, 'r+')
-		self.listaDeSaltos = arquiDeLeitura.readline()
-		arquiDeLeitura.closed
-
 	def setPredicoesFeitas(self, novasPredicoes):
 		self.predicoesFeitas = novasPredicoes
 
@@ -51,5 +46,5 @@ class Predicao(object):
 			stringListaDeSaltos += ' ' + salto
 		return stringListaDeSaltos
 
-	def predizer(self):
+	def predizer(self, listaDeSaltos):
 		pass

@@ -8,22 +8,20 @@ class TwoLevelAdaptive(Predicao):
 		Predicao.__init__(self)
 		self.tabelaDeHistoricos = {'TT' : 'T', 'TN' : 'T', 'NT' : 'T', 'NN' : 'T'}
 
-
-	def predizer(self):
+	def predizer(self, listaDeSaltos):
 		counter = 0
 		start = 0
-		while counter < len(self.listaDeSaltos):
+		while counter < len(listaDeSaltos):
 			if(counter < 2):
 				self.predicoesFeitas += self.tabelaDeHistoricos['TT']
-				if(self.tabelaDeHistoricos['TT'] == self.listaDeSaltos[counter]):
+				if(self.tabelaDeHistoricos['TT'] == listaDeSaltos[counter]):
 					self.predicoesCorretas += 1
 			else:
-				#print(self.listaDeSaltos[start:counter])
-				self.predicoesFeitas += self.tabelaDeHistoricos[self.listaDeSaltos[start:counter]]
-				if(self.tabelaDeHistoricos[self.listaDeSaltos[start:counter]] == self.listaDeSaltos[counter]):
+				self.predicoesFeitas += self.tabelaDeHistoricos[listaDeSaltos[start:counter]]
+				if(self.tabelaDeHistoricos[listaDeSaltos[start:counter]] == listaDeSaltos[counter]):
 					self.predicoesCorretas += 1
 				else:
-					self.tabelaDeHistoricos[self.listaDeSaltos[start:counter]] = self.listaDeSaltos[counter]
+					self.tabelaDeHistoricos[listaDeSaltos[start:counter]] = listaDeSaltos[counter]
 				start += 1
 			counter += 1
 

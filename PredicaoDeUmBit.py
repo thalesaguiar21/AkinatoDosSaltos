@@ -13,8 +13,8 @@ class PredicaoDeUmBit(Predicao):
 		elif(self.proximaPredicao == 'N'):
 			self.proximaPredicao = 'T'
 
-	def predizer(self):
-		for salto in self.listaDeSaltos:
+	def predizer(self, listaDeSaltos):
+		for salto in listaDeSaltos:
 			self.predicoesFeitas += self.proximaPredicao
 			if(salto == self.proximaPredicao):
 				self.predicoesCorretas += 1
