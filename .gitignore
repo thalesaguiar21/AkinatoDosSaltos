@@ -2,4 +2,5 @@
 __pycache__/
 # Ignore os arquivos txt
 *.txt
+*.class
 *~
