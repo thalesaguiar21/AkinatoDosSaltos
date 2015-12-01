@@ -47,12 +47,16 @@ public abstract class Preditor {
 		this.predicoesCorretas = predicoesCorretas;
 	}
 
-	public String getPrecicoesFeitas() {
+	public String getPredicoesFeitas() {
 		return predicoesFeitas;
 	}
 
-	public void setPrecicoesFeitas(String precicoesFeitas) {
+	public void setPredicoesFeitas(String precicoesFeitas) {
 		this.predicoesFeitas = precicoesFeitas;
+	}
+	
+	public String getNome(){
+		return this.nomeDoPreditor;
 	}
 	
 	
