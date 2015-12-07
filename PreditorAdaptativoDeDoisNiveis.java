@@ -1,13 +1,23 @@
-package font;
+package preditores;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Esta classe simula um preditor adaptativo de dois níveis. Ele consiste em atualizar a próxima predição
+ * do preditor a cada dois erros consecutivos.
+ * 
+ * @author Thales
+ * @version 02/12/2015
+ */
 public class PreditorAdaptativoDeDoisNiveis extends Preditor {
 
 	private Map<String, Character> tabelaDePredicoes;
 	
-	//Inicia a tabela com a predição padrão 'T'
+	/**
+	 * Cria um novo objeto do tipo <i>PreditorAdaptativoDeDoisNiveis</i>, no qual sua tabela de histórico
+	 * é inicializada supondo que os desvios serão sempre tomados.
+	 */
 	public PreditorAdaptativoDeDoisNiveis() {
 		super();
 		this.tabelaDePredicoes = new HashMap<String, Character>(4);
@@ -15,9 +25,13 @@ public class PreditorAdaptativoDeDoisNiveis extends Preditor {
 		this.tabelaDePredicoes.put("TN", new Character('T'));
 		this.tabelaDePredicoes.put("NT", new Character('T'));
 		this.tabelaDePredicoes.put("NN", new Character('T'));
-		this.nomeDoPreditor = "Preditor adaptativo de dois níveis";
+		this.nomeDoPreditor = "Preditor adaptativo de dois nï¿½veis";
 	}
 	
+	/**
+	 * Sobrecarrega o método da classe mãe, fazendo com que a tabela de histórico de saltos
+	 * também seja resetada, ou seja, ela volta a supor que todos os desvios serão tomados.
+	 */
 	@Override
 	protected void reset(){
 		super.reset();
@@ -27,7 +41,9 @@ public class PreditorAdaptativoDeDoisNiveis extends Preditor {
 		this.tabelaDePredicoes.put("NN", new Character('T'));
 	}
 	
-	
+	/**
+	 * Executa o algoritmo de predições para o preditor adaptativo de dois níveis.
+	 */
 	@Override
 	void predizer(String listaDeSaltos) {
 		int counter = 0;
