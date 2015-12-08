@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Esta classe simula um preditor adaptativo de dois níveis. Ele consiste em atualizar a próxima predição
- * do preditor a cada dois erros consecutivos.
+ * Esta classe simula um preditor adaptativo de dois níveis. Ele consiste em atualizar a tabela de histórico de saltos
+ * do preditor sempre que ocorerr um erro após o segundo salto.
  * 
  * @author Thales
  * @version 02/12/2015
